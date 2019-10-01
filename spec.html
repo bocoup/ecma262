@@ -24187,7 +24187,7 @@
           1. Let _entry_ be the ExportEntry Record {[[ModuleRequest]]: _module_, [[ImportName]]: `"*"`, [[LocalName]]: *null*, [[ExportName]]: *null* }.
           1. Return a new List containing _entry_.
         </emu-alg>
-        <emu-grammar>ExportFromClause : `*` as IdentifierName</emu-grammar>
+        <emu-grammar>ExportFromClause : `*` `as` IdentifierName</emu-grammar>
         <emu-alg>
           1. Let exportName be the StringValue of IdentifierName.
           1. Let _entry_ be the ExportEntry Record {[[ModuleRequest]]: _module_, [[ImportName]]: `"*"`, [[LocalName]]: *null*, [[ExportName]]: _exportName_ }.
