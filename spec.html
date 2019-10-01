@@ -23953,11 +23953,8 @@
 
         ExportFromClause :
           `*`
-          NamedExports
-          NameSpaceExport
-
-        NameSpaceExport:
           `*` `as` IdentifierName
+          NamedExports
 
         NamedExports :
           `{` `}`
@@ -24086,13 +24083,13 @@
         <emu-alg>
           1. Return a new empty List.
         </emu-alg>
+        <emu-grammar>ExportFromClause : `*` `as` IdentifierName </emu-grammar>
+        <emu-alg>
+          1. Return a List containing the StringValue of |IdentifierName|.
+        </emu-alg>
         <emu-grammar>ExportFromClause : NamedExports</emu-grammar>
         <emu-alg>
           1. Return the ExportedNames of |NamedExports|.
-        </emu-alg>
-        <emu-grammar>NameSpaceExport : `*` `as` IdentifierName </emu-grammar>
-        <emu-alg>
-          1. Return a List containing the StringValue of |IdentifierName|.
         </emu-alg>
         <emu-grammar>ExportDeclaration : `export` VariableStatement</emu-grammar>
         <emu-alg>
